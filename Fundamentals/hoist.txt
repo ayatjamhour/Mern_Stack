@@ -1,0 +1,29 @@
+1-
+console.log(hello);                                   
+var hello = 'world'; 
+output : undefined
+..........................................
+2-
+var needle = 'haystack';
+test();
+function test(){
+    var needle = 'magnet';
+    console.log(needle);
+}
+output : "magnet"
+..........................................
+3-
+var brendan = 'super cool';
+function print(){
+    brendan = 'only okay';
+    console.log(brendan);
+}
+console.log(brendan);
+output : "super cool"
+..........................................
+4-
+output : undefined
+..........................................
+5-
+output : undefined
+..........................................
