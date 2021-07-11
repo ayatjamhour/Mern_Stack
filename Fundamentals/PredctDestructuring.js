@@ -16,7 +16,7 @@ const employee = {
 }
 const { name: otherName } = employee;
 //Predict the output
-console.log(name);
+console.log(name); // name not defined
 console.log(otherName);
 // output: Elon
 // undefined //there are no array in this object 
@@ -31,9 +31,9 @@ const password = '12345';
 const { password: hashedPassword } = person;
 //Predict the output
 console.log(password);
-console.log(hashedPassword);
+console.log(hashedPassword); //error because the person doesnt have password
 // output: "12345"
-// undefined //error
+// undefined 
 ....................
 4 -
 const numbers = [8, 2, 3, 5, 6, 1, 67, 12, 2];
@@ -43,8 +43,8 @@ const [, , , , , , , , third] = numbers;
 //Predict the output
 console.log(first == second);
 console.log(first == third);
-output: false
-true
+// output: false
+// true
 ....................
 5 - 
 const lastTest = {
@@ -59,7 +59,7 @@ console.log(key);
 console.log(secondKey);
 console.log(secondKey[0]);
 console.log(willThisWork);
-output: "value"
-[1, 5, 1, 8, 3, 3]
-1
-5
+// output: "value"
+// [1, 5, 1, 8, 3, 3]
+// 1
+// 5
