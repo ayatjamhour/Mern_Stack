@@ -1,3 +1,7 @@
+###########
+without hoisting
+###########
+
 1-
 console.log(hello);                                   
 var hello = 'world'; 
