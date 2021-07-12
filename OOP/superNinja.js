@@ -19,7 +19,7 @@ class Ninja {
 class Sensei extends Ninja { //create a class Sensei that inherits from the Ninja class
     constructor(name) {
         super(name, 100, 10, 10);
-        this.wisdom = 10; //add an attribute: wisdom - default to 10
+        this.wisdom = 10; //add an attribute: wisdom - default to 10 , i can add it in first constroctor 
     }
     speakWisdom() { //create a method: speakWisdom()
         super.drinkSake();
@@ -29,5 +29,4 @@ class Sensei extends Ninja { //create a class Sensei that inherits from the Ninj
 
 const superSensei = new Sensei("Master Splinter");
 superSensei.speakWisdom();
-
 superSensei.showStats();
