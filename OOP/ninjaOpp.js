@@ -8,21 +8,23 @@ class Ninja { //Create a Ninja class
 
     sayName() { //add a method: sayName() - This should log that Ninja's name to the console
         console.log(this.name);
-        return this;
+        // return this;
     }
 
     showStats() { //add a method: showStats() - This should show the Ninja's name, strength, speed, and health.
 
-        console.log("Name: " + this.name + ", Health: " + this.health + ", Speed: " + this.speed + ", Strength: " + this.strength);
-        return this;
+        console.log("Name: " + this.constructor.name + ", Health: " + this.health + ", Speed: " + this.speed + ", Strength: " + this.strength);
+
     }
 
     drinkSake() { // add a method: drinkSake() - This should add +10 Health to the Ninja
         this.health += 10;
-        return this;
+
     }
 }
 
 const ninja1 = new Ninja("Hyabusa");
 ninja1.sayName();
+ninja1.drinkSake();
+ninja1.drinkSake();
 ninja1.showStats();

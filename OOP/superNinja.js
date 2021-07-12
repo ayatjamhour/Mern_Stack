@@ -1,15 +1,15 @@
 class Ninja {
     constructor(name) {
         this.name = name;
-        this.health = 200;
+        this.health = 100;
         this.strength = 3;
         this.speed = 3;
     }
     sayName() {
-        console.log("My name is :" + this.name);
+        console.log("My name is :" + this.constructor.name);
     }
     showStats() {
-        console.log("My name is :" + this.name, "Strength:" + this.strength, "Speed:" + this.speed, "Health:" + this.health);
+        console.log("My name is :" + this.constructor.name, "Strength:" + this.strength, "Speed:" + this.speed, "Health:" + this.health);
     }
     drinkSake() {
         this.health += 10;
@@ -18,7 +18,7 @@ class Ninja {
 
 class Sensei extends Ninja { //create a class Sensei that inherits from the Ninja class
     constructor(name) {
-        super(name, 200, 10, 10);
+        super(name, 100, 10, 10);
         this.wisdom = 10; //add an attribute: wisdom - default to 10
     }
     speakWisdom() { //create a method: speakWisdom()
