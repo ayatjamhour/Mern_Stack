@@ -6,6 +6,9 @@
 // // import React, { useState } from 'react'
 
 // // function App() {
+    const Tips = [{
+
+    }]
 // //   const [tasks, setTask] = useState("");
 // //   const newTask = (task) => {
 // //     setTask(task);
@@ -13,6 +16,7 @@
 // //   }
 // //   return (
 // //     <div className="App">
+// Tips.map ((eachTip ,i ) => <Tip ... />)
 // //       <Form tasks={newTask} />
 // //       <Doing task={tasks} />
 // //     </div>
@@ -82,6 +86,11 @@
 //     render() {
 //         return (
 //             <div className="toDoApp">
+
+//<input addNewTask ={addNewTask} />
+//<Box *3>
+//
+// 
 //                 <ToDo task_list={this.state.task_list} newTaskHandler={this.newTaskHandler} onDescpChange={this.onDescpChange}/>
 //                 <Doing task_list={this.state.task_list} taskCompleteHandler={this.taskCompleteHandler} onDescpChange={this.onDescpChange}/>
 //                 <Done task_list={this.state.task_list} taskClearHandler={this.taskClearHandler} onDescpChange={this.onDescpChange}/>

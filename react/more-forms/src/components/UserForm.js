@@ -82,8 +82,10 @@ const UserForm = (props) => {
         // setPasswordError("password must be more than 5 char");
         // if (e.target.value.length > 5) {
         //     setPasswordError("");
-        if (e.target.value.length < 5) {
+        //////////////////////////////////////////////////////////////////////
+        if (e.target.value.length < 8 && e.target.value.length !== 0) {
             setPasswordError("password must be more than 8 char");
+            // setPassword = e.target.value;
         }
         else {
             setPasswordError("");
@@ -91,13 +93,16 @@ const UserForm = (props) => {
     };
     const confpasswordChange = (e) => {
         // setConfirmPassword(e.target.value);
-        if (e.target.value.length < 5) {
-            setConfirmPasswordError("password and confirm must be the same  ");
+        //  if(e.target.value.pasw !==e.target.value.pasc)
+        //  if (pasc!=pasw)
+        if (e.target.value !== password) {
+            setConfirmPasswordError("password and Confirmation did not match");
         }
         else {
-            setPasswordError("");
+            setConfirmPasswordError("");
         }
     };
+    //////////////////////////////////////////////////////////////////////////////////////////
     //     const message = () => {
     //         return isSubmited ?
     //             "Thank you for submiting" :

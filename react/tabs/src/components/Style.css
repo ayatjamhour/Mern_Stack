@@ -15,14 +15,14 @@ margin-right: 40px;
     background:black;
     color : white;
 }
-/* .button:focus {
+ .button:focus {
     background-color:black;
     color : white;
 }
 .button:hover {
     background-color:yellow;
-} */
-.blackButton{
+} 
+/* .blackButton{
     background-color: black;
     color: white;
   }
@@ -30,4 +30,4 @@ margin-right: 40px;
   .whiteButton{
     background-color: white;
     color: black;
-  }
+  }  */

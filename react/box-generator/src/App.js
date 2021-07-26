@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+
+import React, { useState } from 'react';
+
 import './App.css';
 
+import DisplayForm from './components/DisplayForm';
+import Box from './components/Box';
+
 function App() {
+  const [boxes, setState] = useState([]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="App" >
+      <div style={{ display: 'flex' }} >
+        <DisplayForm value={boxes} setValue={setState} />
+        </div>
+        {boxes.map((box, index) => { //maping for (value,index)
+
+          return (
+
+            // <div key={index} >
+            <Box value={box} />
+            // </div>
+
+          );
+        })}
+        
+      </div >
+    
   );
 }
 

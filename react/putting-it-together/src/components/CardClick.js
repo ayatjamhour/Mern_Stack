@@ -16,13 +16,14 @@ class CardClick extends React.Component {
     }
 
     render() {
-        const { firstName, lastName, age, hairColor } = this.props;
+        const { firstName, lastName, hairColor } = this.props;
         return (
             <div>
                 <h2>{firstName} , {lastName}</h2>
                 <p>age : {this.state.age}</p>
                 <p>hair color : {hairColor}</p>
-                <button onClick={this.increase}>click here !</button>
+                {/* <button onClick={this.increase}>click here !</button> */}
+                <button onClick={this.increase}>birthday {firstName}{lastName}</button>
 
 
 

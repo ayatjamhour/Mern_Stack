@@ -9,13 +9,13 @@ const DisplayForm = (props) => {
 
         const newBoxes = {
             color: color,
-            length: length
+            length: length //width and heigh
         };
-        setValue([...value, newBoxes]);
+        setValue([...value, newBoxes]); //a copy, without changing the original one , each one has a different address
         setColor("");
         setWidth(0);
     }
-    
+
 
     return (
         <form onSubmit={createBox}>

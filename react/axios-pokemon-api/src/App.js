@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+import Pokemon from "./components/Pokemon.js"
+// import Display from "./components/Display.js"
+// import PokemonLift from "./components/PokemonLift.js"
+// import React, { useState } from 'react';
 import './App.css';
 
 function App() {
+  // const [pokemon, setPokemon] = useState([])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <PokemonLift pokemon={pokemon} setPokemon={setPokemon} />
+      <Display pokemon={pokemon} /> */}
+      <Pokemon />
+      {/* <Display  /> */}
     </div>
   );
 }

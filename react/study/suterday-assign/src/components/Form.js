@@ -3,15 +3,21 @@
 
 // // const Form = (props) => {
 // //     const [todo, setTodo] = useState([]);
-// //     const [name, setName] = useState("");
 // //     const [doing, setDoing] = useState();
 // //     const [done, setDone] = useState({});
+// //     const [name, setName] = useState("");
 // //     const [like, setLike] = useState({});
 // //     const [tips, setTips] = useState({});
 
 
 // //     const onSubmit = (e, value) => {
 // //         e.preventDefault();
+    // addNew , inside app we should addNew inside it put [... ] , doing and finish 
+   //app // doing بحط جواها فيلتر setDoing.status = "doing"
+    //setDoing([...doingTasks , doingTasks])
+    //toDo.filter ((eachTask)=>{return eachTask.taskName !== doingTask.taskNmae})
+    //setToDoTasks(newTaskArr)}
+    //done بنعمل نيو ارر
 // //         setTodo(todo.concat({ name: name }));
 // //         setName("");
 // //         props.tasks(value);
@@ -34,9 +40,9 @@
 // //                     return <div key={index}>
 // //                         {/* <p > {item.name}</p> */}
 // //                         <form onSubmit={doingList}>
-// //                             <p > {item.name}</p>
+// //                             <p > {item.name}</p> header={value.taskName}
 // //                             <button onClick={() => doingList(index)} >Start Doing</button>
-                            
+
 // //                         </form>
 // //                     </div>
 // //                 })
@@ -78,10 +84,10 @@
 //                     {this.props.task_list.map((item) => {
 //                         return <ListItem description={item.description} key={"todo_"+ item.id}  id={item.id} onDescpChange={this.props.onDescpChange} clickHandler={null}/>
 //                     })}
-                    
+
 //                     <AddItem clickHandler={this.createListItem}/>
 //                 </ul>
-                
+
 //             </div>
 //         );
 //     }

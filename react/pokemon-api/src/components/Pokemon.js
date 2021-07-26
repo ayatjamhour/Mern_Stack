@@ -1,24 +1,21 @@
 import React,{useState} from 'react'
-import axios from 'axios';
 
 const Pokemon = () => {
-    const [people, setPeople] = useState([]);
+    const [pokemon, setPokemon] = useState([]);
  
     const Fetch =() => {
-        // fetch('https://pokeapi.co/api/v2/pokemon?limit=807')
-        //     .then(response => response.json())
-        //     .then(response => setPeople(response.results))
-            axios.get('https://pokeapi.co/api/v2/pokemon?limit=807')
-            //"https://pokeapi.co/api/v2/pokemon
-            .then(response=>{setPeople(response.data.results)})
+        fetch('https://pokeapi.co/api/v2/pokemon?limit=807')
+            .then(response => response.json())
+            .then(response => setPokemon(response.results))
+            .catch(err => console.log("error"+err));
     };
  
     return (
         <>
-        <button onClick={Fetch}>press to fetch</button>
+        <button onClick={Fetch}>Fetch Pokemon</button>
         <div>
-            {people.length > 0 && people.map((person, index)=>{
-                return (<div key={index}>{person.name}</div>)
+            { pokemon.map((p, index)=>{ //pokemon.length > 0 &&
+                return (<div key={index}>{p.name}</div>)
             })}
         </div>
         </>
@@ -26,4 +23,5 @@ const Pokemon = () => {
 }
 export default Pokemon
 ///////////////
+
   

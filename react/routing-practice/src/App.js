@@ -32,6 +32,7 @@ function App() {
         {/* <Route path ="/" /> */}
          <Home path="/home" />
          <Word path="/:word" />
+         {/* <Num path="/:word" /> */}
          <Color path="/:word/:fcolor/:bcolor" />
          <Num path="/:num" />
         </Router>

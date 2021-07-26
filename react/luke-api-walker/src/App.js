@@ -1,5 +1,5 @@
 import './App.css';
-import {Router} from '@reach/router';
+import { Router } from '@reach/router';
 import People from './components/People';
 import Search from './components/Search';
 import Planets from './components/Planets';
@@ -7,10 +7,11 @@ import Planets from './components/Planets';
 function App() {
   return (
     <div className="App">
-      <Search/>
+      <Search />
       <Router>
-        <Planets path="/planets/:id"/> 
-        <People path="/people/:id"/>
+        {/* <Search path ="/" /> */}
+        <Planets path="/planets/:id" />
+        <People path="/people/:id" />
       </Router>
     </div>
   );
