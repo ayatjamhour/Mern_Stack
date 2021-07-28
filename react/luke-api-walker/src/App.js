@@ -1,8 +1,9 @@
 import './App.css';
 import { Router } from '@reach/router';
-import People from './components/People';
-import Search from './components/Search';
-import Planets from './components/Planets';
+import People from './components/People.js';
+import Search from './components/Search.js';
+import Planets from './components/Planets.js';
+import StarShips from './components/StarShips.js'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         {/* <Search path ="/" /> */}
         <Planets path="/planets/:id" />
         <People path="/people/:id" />
+        <StarShips path="/starships/:id" />
       </Router>
     </div>
   );

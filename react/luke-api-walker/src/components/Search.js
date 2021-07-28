@@ -14,8 +14,10 @@ const Search = () => {
         <div >
             <h1>search for person or planet</h1>
             <form onSubmit={clickSearch} style={{ marginTop :"50px"}}>
-               <h3>Search for :</h3> <select onChange={(e) => setChoice(e.target.value)} style={{background :"lightblue" , marginLeft :"3px"}}>
+               <h3>Search for :</h3>
+                <select onChange={(e) => setChoice(e.target.value)} style={{background :"lightblue" , marginLeft :"3px"}}>
                 <option value=" ">  </option>
+                <option value="starships">Star Ship</option>
                     <option value="people">People</option>
                     <option value="planets">Planet</option>
                 </select>
