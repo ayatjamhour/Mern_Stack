@@ -1358,7 +1358,7 @@ DBCollection.prototype.updateMany@src/mongo/shell/crud_api.js:655:19
 @(shell):1:1
 > db.students.updateMany({},{$set:{'number_of_belts':0}})
 { "acknowledged" : true, "matchedCount" : 3, "modifiedCount" : 3 }
-> db.students.updateMany({home_state:'jenin'},{$inc:{'number_of_belts':2}})
+> db.students.updateMany({home_state:'jenin'},{$inc:{'number_of_belts':1}})
 { "acknowledged" : true, "matchedCount" : 0, "modifiedCount" : 0 }
 > db.students.find().pretty()
 {
