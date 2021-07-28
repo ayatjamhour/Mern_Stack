@@ -326,9 +326,6 @@ uncaught exception: SyntaxError: missing ) after argument list :
 }
 > db.students.update({},{$set:{'intrests':['coding','branch','mogodb']}})
 WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
-> > db.students.updateMany({},{$set:{'intrests':['coding','branch','mogodb']}})
-uncaught exception: SyntaxError: expected expression, got '>' :
-@(shell):1:0
 > db.students.updateMany({},{$set:{'intrests':['coding','branch','mogodb']}})
 { "acknowledged" : true, "matchedCount" : 7, "modifiedCount" : 6 }
 > db.students.updateMany({},{$addToSet:{intrests:'react'}})

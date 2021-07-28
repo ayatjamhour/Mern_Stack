@@ -1,0 +1,20 @@
+> use my_first_db
+db.createCollection("students")
+db.students.insert({name:"ayat",home_state:"ramallah",luck_number:2,birthday:{month:12,day:2,year:1996}})
+db.students.find().pretty()
+db.students.find({home_state:"tulkarem"}).pretty()
+db.students.find({luck_number:{$lte: 9}}).pretty()
+db.students.update({},{$set:{'intrests':['coding','branch','mogodb']}})
+> db.students.updateMany({},{$set:{'intrests':['coding','branch','mogodb']}})
+> db.students.updateMany({},{$addToSet:{intrests:'react'}})
+db.students.update({name:'ameera'},{$push:{intrests:'c++'}})
+db.students.update({name:'ameera'},{$pull:{intrests:'c++'}})
+db.students.remove({name:{ayah}},true)
+db.students.insert({name:"ameena",home_state:"ramallah",luck_number:21,birthday:{month:1,day:1,year:1991}})
+db.students.remove({luck_number:{$gt:5}},true)
+db.students.remove()
+db.students.updateMany({home_state:'jenin'},{$inc:{'number_of_belts':0}})
+db.students.update({},{$unset:{luck_number:1}})
+db.students.updateMany({},{$currentDate:{'updated_field':{$type:'date'}}})
+
+
