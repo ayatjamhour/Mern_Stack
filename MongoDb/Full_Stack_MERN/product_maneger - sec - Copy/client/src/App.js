@@ -11,19 +11,15 @@
 import React from 'react';
 import { Router } from '@reach/router';
 import Main from './views/Main';
-// import Details from './views/Details';
-import Edit from './views/Edit';
-// import AllProduct from './views/AllProduct';
-// import Card from './views/Card';
+import Detail from './views/Details';
+import Card from './views/Card';
 function App() {
   return (
     <div className="App">
       <Router>
         <Main path="/product" />
-        {/* <AllProduct path="/" /> 
-        <Details path="/product/:id" /> */}
-        {/* <Card path="/" /> */}
-        <Edit path="/product/edit/:id" />
+        <Detail path="/product/:id" />
+        <Card path="/product/delete/:id" />
       </Router>
     </div>
   );

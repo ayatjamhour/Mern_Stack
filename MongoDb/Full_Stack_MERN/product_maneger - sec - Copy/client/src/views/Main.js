@@ -3,17 +3,13 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Product from '../components/Product';
 import List from '../components/List';
-// import Card from './Card';
-import Details from './Details';
-// import { AllProduct } from '../components/AllProduct';
-import AllProduct from './AllProduct';
-
+// import Details from './views/Details';
 
 const Main = () => {
     const [product, setProduct] = useState([]);
     const [loaded, setLoaded] = useState(false);
     useEffect(() => {
-        axios.get('http://localhost:8000/api/product')
+        axios.get('http://localhost:8000/api/people')
             .then(res => {
                 setProduct(res.data);
                 setLoaded(true);
@@ -22,13 +18,8 @@ const Main = () => {
     return (
         <div>
             <Product />
-            {loaded && <List product={product} />}
             <hr />
-            {/* <Card /> */}
-            <AllProduct />
-            <hr />
-            <Details />
-
+            {loaded && <List people={product} />}
         </div>
     )
 }
