@@ -6,14 +6,14 @@ const Update = (props) => {
     const [price, setPrice] = useState('');
     const [description, setDescription] = useState('');
     useEffect(() => {
-        axios.get('http://localhost:8000/api/product/' + id)
+        axios.get('http://localhost:8000/api/products/' + id)
             .then(res => {
                 title(res.data.title);
                 price(res.data.price);
                 description(res.data.description);
             })
     }, [])
-    const updatePerson = e => {
+    const update = e => {
         e.preventDefault();
         axios.put('http://localhost:8000/api/product/' + id, {
             title,
@@ -24,28 +24,20 @@ const Update = (props) => {
     }
     return (
         <div>
+            {/* <Form /> */}
             <h1>Update a Product</h1>
-            <form onSubmit={updatePerson}>
+            <form onSubmit={update}>
                 <p>
-                    <label>Title</label><br />
-                    <input type="text"
-                        name="title"
-                        value={title}
-                        onChange={(e) => { setTitle(e.target.value) }} />
+                    <label>Title</label>
+                    <input type="text" name="title" value={title} onChange={(e) => { setTitle(e.target.value) }} />
                 </p>
                 <p>
-                    <label>Price</label><br />
-                    <input type="text"
-                        name="price"
-                        value={price}
-                        onChange={(e) => { setPrice(e.target.value) }} />
+                    <label>Price</label>
+                    <input type="text" name="price" value={price} onChange={(e) => { setPrice(e.target.value) }} />
                 </p>
                 <p>
-                    <label>Description</label><br />
-                    <input type="text"
-                        name="description"
-                        value={description}
-                        onChange={(e) => { setDescription(e.target.value) }} />
+                    <label>Description</label>
+                    <input type="text" name="description" value={description} onChange={(e) => { setDescription(e.target.value) }} />
                 </p>
                 <input type="submit" />
             </form>
