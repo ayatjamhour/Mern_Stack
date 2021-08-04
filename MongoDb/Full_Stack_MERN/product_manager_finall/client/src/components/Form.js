@@ -19,6 +19,27 @@ const Form = (props) => {
             return "Welcome, please add product";
         }
     };
+    return (
+        <div>
+            <h1>{formMessage()}</h1>
+            <form onSubmit={(e) => handleSubmit(e)} >
+                <div>
+                    <label>Title  :</label>
+                        <input type="text" name="title" value={product.title} onChange={(e) => productChange(e)} />
+                        <p></p>
+                </div>
+                <div>
+                    <label>Price  :</label>
+                        <input type="number"  name="price"  value={product.price} onChange={(e) => productChange(e)} />
+                </div>
+                <div>
+                    <label>Description:</label>
+                        <input type="text" name="description" value={product.description} onChange={(e) => productChange(e)} />
+                </div>
+                <button type="submit" className="submit" style ={{ marginBottom  :"100px"}}>{submitButton}</button>
+            </form>
+            
+        </div>
     //     const [title, setTitle] = useState("");
     // const [error, setError] = useState("");
     // const [titleError, setTitleError] = useState("");
@@ -117,27 +138,7 @@ const Form = (props) => {
 
 
 
-    return (
-        <div>
-            <h1>{formMessage()}</h1>
-            <form onSubmit={(e) => handleSubmit(e)} >
-                <div>
-                    <label>Title  :</label>
-                        <input type="text" name="title" value={product.title} onChange={(e) => productChange(e)} />
-                        <p></p>
-                </div>
-                <div>
-                    <label>Price  :</label>
-                        <input type="number"  name="price"  value={product.price} onChange={(e) => productChange(e)} />
-                </div>
-                <div>
-                    <label>Description:</label>
-                        <input type="text" name="description" value={product.description} onChange={(e) => productChange(e)} />
-                </div>
-                <button type="submit" className="submit" style ={{ marginBottom  :"100px"}}>{submitButton}</button>
-            </form>
-            
-        </div>
+   
         //         <div style={{ marginLeft: "666px" }}>
         //             <h3>{formMessage()}</h3>
         //             <h1>Product Manager</h1>
