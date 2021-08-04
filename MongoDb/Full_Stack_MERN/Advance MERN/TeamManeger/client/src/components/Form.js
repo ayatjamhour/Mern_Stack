@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 const Form = (props) => {
 
-    const { newPlayer, setNewPlayer, onSubmitProp } = props;
+    const { newPlayer, setNewPlayer, onSubmit } = props;
     const [name, setName] = useState("");
     const [position, setPosition] = useState("");
     const [game1, setGame1] = useState(0);
@@ -17,7 +17,7 @@ const Form = (props) => {
     // } 
     const onSubmitHandler = (e) => {
         e.preventDefault();
-        onSubmitProp({
+        onSubmit({
             name,
             position,
             game1,
@@ -37,7 +37,7 @@ const Form = (props) => {
                     <label>Position:</label>
                     <input type="text" onChange={(e) => setPosition(e.target.value)} />
                 </div>
-                <button type="submit">Submit</button>
+                <button type="submit">Add</button>
             </form>
         </div>
     )

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import DeleteBtn from './Delete';
-import LittleHead from './LittleHead';
+import Header from './Header';
 
 
 const List = (props) => {
@@ -12,26 +12,26 @@ const List = (props) => {
             .then(res => setPlayer(res.data))
     }, [])
 
-    const removeFromDom = (playerId) => {
+    const remove = (playerId) => {
         setPlayer(player.filter(players => player._id !== playerId))
     }
 
     return (
         <div>
-            <LittleHead />
-            <table>
-                <tbody>
+            <Header />
+            <table  border="1" width="60%">
+                <tbody >
                     <tr>
-                        <td> <h2>Players</h2></td>
-                        <td><h2>Preferred Position</h2></td>
-                        <td><h2>Actions</h2></td>
+                        <td> <h3>Players</h3></td>
+                        <td><h3>Preferred Position</h3></td>
+                        <td><h3>Actions</h3></td>
                     </tr>
                     {player.map((players, idx) => {
                         return (
                             <tr key={idx}>
                                 <td>{players.name}</td>
                                 <td>{players.position}</td>
-                                <td><DeleteBtn playerId={players._id} successCallback={() => removeFromDom(players._id)} /></td>
+                                <td><DeleteBtn playerId={players._id} successCallback={() => remove(players._id)} /></td>
                             </tr>
                         )
                     })}

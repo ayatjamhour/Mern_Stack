@@ -12,6 +12,7 @@ function App() {
     <div className="App">
       {/* <Main /> */}
       <Router>
+        {/* we can use loaded for a table */}
         <AllAuthor default path="/" />
         <Create path="/author/new" />
         <Edit path="/author/edit/:id" />

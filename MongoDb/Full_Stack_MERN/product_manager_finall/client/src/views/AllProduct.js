@@ -57,6 +57,7 @@ const AllProduct = (props) => {
     }
     return (
         <div>
+            {/* < hr style ={{ marginBottom  :"60px"}} /> */}
             <Form product={product} setProduct={setProduct} error={error} handleSubmit={handleOnSubmit} submitButton={"please Add Product"}
 
             />
@@ -68,8 +69,7 @@ const AllProduct = (props) => {
                             <Link to={"/product/" + product._id}>
                                 {product.title}
                             </Link>
-                            <Delete id={product._id} afterDelete={afterDelete}
-                            />
+                            <Delete id={product._id} afterDelete={afterDelete} />
                         </div>
                     )
                 })

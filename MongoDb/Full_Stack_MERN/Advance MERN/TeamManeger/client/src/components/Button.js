@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import {BtnSets} from '../styles/Styles';
+
 
 const Button = (props) => {
     const {playerId, gameId} = props;
@@ -11,7 +11,7 @@ const Button = (props) => {
         .then(response => {
             setPlayer(response.data);
         })
-    },[])
+    },[player])
     const onPlayHandler = (statusNum) => {
         console.log("Inside onPlayingHandler");
         const updatedPlayer = {...player ,
@@ -29,15 +29,15 @@ const Button = (props) => {
 
     return(
         <div>
-            <button style={{backgroundColor: player && player.status[`game${gameId}`] === 1 ? "#4CAF50" : ""}} 
+            <button style={{backgroundColor: player && player.status[`game${gameId}`] === 1 ? "green" : ""}} 
             onClick={(e) => onPlayHandler(1)}>
                 Playing
             </button>
-            <button style={{backgroundColor: player && player.status[`game${gameId}`] === -1 ? "#FF0000" : ""}} 
+            <button style={{backgroundColor: player && player.status[`game${gameId}`] === -1 ? "red" : ""}} 
             onClick={(e) => onPlayHandler(-1)}>
                 Not Playing
             </button>
-            <button style={{backgroundColor: player && player.status[`game${gameId}`] === 0 ? "#FFFF00" : ""}} 
+            <button style={{backgroundColor: player && player.status[`game${gameId}`] === 0 ? "yellow" : ""}} 
             onClick={(e) => onPlayHandler(0)}>
                 Undecided
             </button>

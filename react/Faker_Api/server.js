@@ -53,6 +53,7 @@ console.log(newCompany);
 
 
 console.log(newCompany);
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 app.get("/api/users/:id", (req, res) =>
     res.send(`${newUser.firstName}`));
 
@@ -64,9 +65,9 @@ app.get("/api/:companies/:name", (req, res) =>
 
     res.send(`Company name: ${newCompany.name}`));
 
-app.get("/api/:user/:company/:info/:extra", (req, res) => 
+app.get("/api/:user/:company/:info/:extra", (req, res) =>
 
-res.send(`User First Name: ${newUser.firstName};  Company name: ${newCompany.name}`));
+    res.send(`User First Name: ${newUser.firstName};  Company name: ${newCompany.name}`));
 
 // app.listen( 8000, () => console.log(`Listening on port: ${port}`) );
 const server = app.listen(8000, () =>

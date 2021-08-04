@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { navigate } from '@reach/router';
 import axios from 'axios';
 import Form from './Form';
-import FinalHead from './Views/FinalHead';
+// import FinalHead from './Views/FinalHead';
 
 const AddPlayer = (props) => {
     const { player, setPlayer } = props;
@@ -18,33 +18,30 @@ const AddPlayer = (props) => {
         }
     });
 
-    const addNewPlayer = (newPlayers) => {
-        axios.post(`http://localhost:8000/api/player`, newPlayers)
+    const addNewPlayer = (newPlayer) => {
+        axios.post(`http://localhost:8000/api/player`, newPlayer)
             .then(res => {
-                setPlayer([
-                    ...player,
-                    res.data,
-                    navigate(`/players/list`)
+                setPlayer([ ...player, res.data, navigate(`/players/list`)
                 ])
             })
             .catch(err => {
-                const errorRes = err.response.data.errors;
+                const errorResponse = err.response.data.errors;
                 const errorArr = [];
-                for (var key of Object.keys(errorRes)) {
-                    errorArr.push(errorRes[key].message)
-                }
+                // for (var key of Object.keys(errorResponse)) {
+                //     errorArr.push(errorResponse[key].message) // array of an error 
+                // }
                 setErrors(errorArr)
             })
     }
 
     return (
         <div>
-            <FinalHead />
+            {/* <FinalHead /> */}
             <div>
                 <h3>Add Player</h3>
                 <Form newPlayer={newPlayer}
                     setNewPlayer={setNewPlayer}
-                    onSubmitProp={addNewPlayer} />
+                    onSubmit={addNewPlayer} />
                 {errors.map((err, index) => <p key={index}>{err}</p>)}
             </div>
         </div>

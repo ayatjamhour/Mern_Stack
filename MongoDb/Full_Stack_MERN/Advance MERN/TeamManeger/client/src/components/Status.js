@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Button from './Button';
-import '../styles/PlayerTable.module.css'
-import HeadGame from './Viwes/HeadGame';
+import HeadGame from './HeadGame';
 
 const Status = (props) => {
     const { player, setPlayer, gameId } = props;
 
     useEffect(() => {
-        axios.get(`http://localhost:8000/api/player`)
+        axios.get(`http://localhost:8000/api/players`)
             .then(res => setPlayer(res.data));
     }, [])
     return (

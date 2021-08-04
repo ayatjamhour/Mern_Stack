@@ -1,20 +1,19 @@
 import React from 'react';
 import axios from 'axios';
-import { DestroyBtn } from '../styles/Styles';
 
- const Delete =(props) => {
-    
-    const onClickDestroy = (e) => {
+const Delete = (props) => {
+
+    const onClickHandler = (e) => {
         e.preventDefault();
         axios.delete(`http://localhost:8000/api/player/${props.playerId}`)
-        .then(res => {
-            if(window.confirm(`Are you sure you want to delete this Player`)){
-                props.successCallback();
-            }
-        })
+            .then(res => {
+                if (window.confirm(`You wanna delete  ?   `  )) { //+ {props.play.name}
+                    props.successCallback();
+                }
+            })
     }
     return (
-        <DestroyBtn onClick={onClickDestroy} >Delete</DestroyBtn>
+        <button onClick={onClickHandler} >Delete</button>
     )
 }
 export default Delete

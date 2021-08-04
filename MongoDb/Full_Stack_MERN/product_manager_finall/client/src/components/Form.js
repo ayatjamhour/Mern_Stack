@@ -136,7 +136,7 @@ const Form = (props) => {
                 </div>
                 <button type="submit" className="submit" style ={{ marginBottom  :"100px"}}>{submitButton}</button>
             </form>
-            < hr style ={{ marginBottom  :"60px"}} />
+            
         </div>
         //         <div style={{ marginLeft: "666px" }}>
         //             <h3>{formMessage()}</h3>

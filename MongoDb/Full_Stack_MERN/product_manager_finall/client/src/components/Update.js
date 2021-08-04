@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
+import Delete from '../views/Delete';
 const Update = (props) => {
     const { id } = props;
     const [title, setTitle] = useState('');
@@ -12,7 +13,7 @@ const Update = (props) => {
                 price(res.data.price);
                 description(res.data.description);
             })
-    }, [])
+    }, [id])
     const update = e => {
         e.preventDefault();
         axios.put('http://localhost:8000/api/product/' + id, {
@@ -39,7 +40,8 @@ const Update = (props) => {
                     <label>Description</label>
                     <input type="text" name="description" value={description} onChange={(e) => { setDescription(e.target.value) }} />
                 </p>
-                <input type="submit" />
+                <button type="submit"  ></button>
+                {/* <Delete /> */}
             </form>
         </div>
     )

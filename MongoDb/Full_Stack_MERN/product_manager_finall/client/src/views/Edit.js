@@ -45,13 +45,13 @@ const Edit = (props) => {
 
     return (
         <div>
-            <Link to="/product" className="right">All Product</Link>
+            <Link to="/product" className="right" >All Product</Link>
             <h1>Edit Product</h1>
             <div className="display">
-                <Form  product={product} setProduct={setProduct} error={errors}  handleSubmit={handleOnSubmit} />
+                <Form  product={product} setProduct={setProduct} error={errors}  handleSubmit={handleOnSubmit} submitButton={"edit the Product"} />
                 <Delete
                     id={product._id}
-                    afterDeleteHandler={afterDelete}
+                    afterDeleteHandler={afterDelete} 
                 />
             </div>
         </div>
